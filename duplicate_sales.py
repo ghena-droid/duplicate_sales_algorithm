@@ -5,10 +5,12 @@ unique_sales = []
 for record in sales_records:
     is_duplicate = False
 
-    for item in unique_sales:
-        if record == item:
-            is_duplicate = True
-            break
+for item in unique_sales:
+    if record == item:
+        is_duplicate = True
+        
+        print("Duplicate detected — loop stopped early")
+        break
 
     if is_duplicate == False:
         unique_sales.append(record)
