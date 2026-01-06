@@ -10,8 +10,11 @@ for record in sales_records:
             is_duplicate = True
             break
 
-    if is_duplicate == False:
-        unique_sales.append(record)
+if not is_duplicate:
+    unique_sales.append(record)
+else:
+    print("Duplicate skipped:", record)
+
 
 print("Original Records:", sales_records)
 print("Unique Records:", unique_sales)
